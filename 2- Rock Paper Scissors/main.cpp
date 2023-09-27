@@ -17,28 +17,49 @@ int main()
         char computer = computerHand();
         int victory = compareHands(player, computer);
         announceResults(victory);
-
-        std::cout << "Do you wish to play one more round? (y/n): ";
-        char input{' '};
-        std::cin >> input;
-        if (input == 'n')
-            break;
+        while (1)
+        {
+            std::cout << "\n"
+                      << "Do you wish to play one more round? (y/n): ";
+            char input{' '};
+            std::cin >> input;
+            if (input == 'n' || input == 'y')
+                break;
+            else
+            {
+                std::cout << "Wrong input." << std::endl;
+            }
+        }
     }
     return 0;
 }
 
 char userHand()
 {
-    std::cout << "Please make your choice(R, P, S): ";
     char input{' '};
-    std::cin >> input;
+    while (1)
+    {
+        std::cout << "Please make your choice(R, P, S): ";
+        std::cin >> input;
 
-    if (input == 'r')
-        input = 'R';
-    else if (input == 'p')
-        input = 'P';
-    else if (input == 's')
-        input = 'S';
+        if (input == 'r')
+        {
+            input = 'R';
+            break;
+        }
+        else if (input == 'p')
+        {
+            input = 'P';
+            break;
+        }
+        else if (input == 's')
+        {
+            input = 'S';
+            break;
+        }
+        else
+            std::cout << "Wrong input." << std::endl;
+    }
 
     return input;
 }
