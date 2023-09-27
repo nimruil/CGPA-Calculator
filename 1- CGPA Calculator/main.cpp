@@ -21,6 +21,7 @@ int main()
 
     receiveCourseInfo(semesterCount, semester, semesters, semesterGPAs);
     printResults(semesters, semesterGPAs);
+    outro();
     return 0;
 }
 
