@@ -15,8 +15,9 @@ Player initializePlayer();
 void play(bet &, int, int);
 void evaluate(bet &, int, int, Player &);
 bool enoughOrNot(Player &);
+void outro();
 
-const float rewardRate = 0.01f;
+const float rewardRate = 0.1f;
 
 int main()
 {
@@ -33,6 +34,7 @@ int main()
         evaluate(currentBet, chosenNumber, upperlimit, player);
         keepGoing = enoughOrNot(player);
     }
+    outro();
     return 0;
 }
 
@@ -47,10 +49,16 @@ void introduction()
 int defineUpperLimit()
 {
     std::cout << "--------------------------------------------" << std::endl;
-    std::cout << "What would you like the upper limit to be?: ";
-    int upperlimit{0};
-    std::cin >> upperlimit;
-    return upperlimit;
+    while (1)
+    {
+        std::cout << "What would you like the upper limit to be?: ";
+        int upperlimit{0};
+        std::cin >> upperlimit;
+        if (upperlimit <= 0)
+            std::cout << "Upper limit should be greater than zero." << std::endl;
+        else
+            return upperlimit;
+    }
 }
 
 int determineNumber(int num)
@@ -118,7 +126,7 @@ bool enoughOrNot(Player &player)
 
     if (player.getBalance() > 0)
     {
-        std::cout << "Do you wish to play another game? (y or n):";
+        std::cout << "Do you wish to play another game? (y/n):";
         char input{' '};
         std::cin >> input;
         if (input == 'y')
@@ -134,4 +142,11 @@ bool enoughOrNot(Player &player)
         std::cin >> input;
         return 0;
     }
+}
+
+void outro()
+{
+    char input;
+    std::cout << "Press x to terminate.. ";
+    std::cin >> input;
 }
