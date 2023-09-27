@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 #include <iomanip>
-
 #include "course.h"
 
 int intro();
@@ -59,27 +58,32 @@ void addCourse(std::vector<Course> &courseVector)
 void printResults(std::vector<std::vector<Course>> &semestersVector, std::vector<float> &semesterGPAVector)
 {
     std::cout << std::fixed << std::setprecision(2);
+    int width{25};
+    std::ios_base::fmtflags flags = std::cout.flags();
 
     for (int i = 0; i < semestersVector.size(); i++)
     {
         std::cout << "-------------------" << std::endl;
-        std::cout << i + 1 << ". Semester:" << std::endl;
-        std::cout << "Name"
-                  << "\t"
-                  << "Grade" << std::endl;
+        std::cout << std::left
+                  << std::setw(width) << "Name" << std::setw(width) << "Grade" << std::endl;
 
         for (int j = 0; j < semestersVector[i].size(); j++)
         {
             Course currentCourse = semestersVector[i][j];
-            std::cout << currentCourse.getCourseName()
-                      << "\t" << currentCourse.getCourseGrade() << std::endl;
+            std::cout << std::left
+                      << std::setw(width) << currentCourse.getCourseName()
+                      << std::setw(width) << currentCourse.getCourseGrade() << std::endl;
         }
+        std::cout.flags(flags);
         std::cout << "-------------------" << std::endl;
         std::cout << std::fixed << std::setprecision(2);
         std::cout << i + 1 << ". Semester GPA: " << semesterGPAVector[i] << std::endl;
     }
     std::cout << "-------------------" << std::endl;
+    std::cout << std::endl;
+    std::cout << "-------------------" << std::endl;
     std::cout << "Overall CGPA: " << calculateCGPA(semestersVector) << std::endl;
+    std::cout << "-------------------" << std::endl;
 }
 
 int intro()
