@@ -4,4 +4,4 @@ The guessing project in C++ is a game designed to test the player’s luck and k
 
 Technologies Required: C++ programming language, Object Oriented Programming(OOPS), Data Structures, Input/Output Streams, Memory Management, Standard Template Library(STL).
 
-Exercise #1 from GeeksforGeeks - https://www.geeksforgeeks.org/top-50-cpp-project-ideas-for-beginners-advanced/#casino
+Project #3 from GeeksforGeeks - https://www.geeksforgeeks.org/top-50-cpp-project-ideas-for-beginners-advanced/#casino
