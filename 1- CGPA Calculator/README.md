@@ -4,4 +4,4 @@ A student’s cumulative grade point average (CGPA) can be determined using the 
 
 Technologies Required: C++ programming language, Data Structures, Basic Searching & Sorting algorithms, Basic Arithmetic Operations and formulas, and File Handling ( I/O Streams ).
 
-Exercise #1 from GeeksforGeeks - https://www.geeksforgeeks.org/top-50-cpp-project-ideas-for-beginners-advanced/#cgpa
+Project #1 from GeeksforGeeks - https://www.geeksforgeeks.org/top-50-cpp-project-ideas-for-beginners-advanced/#cgpa
