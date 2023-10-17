@@ -10,4 +10,4 @@ In this game, the user is asked to make choices based on both computer and user 
 
 Technologies Required: C++ programming language, I/O Streams, Standard Library Functions.
 
-#2 Exercise from GeeksforGeeks https://www.geeksforgeeks.org/top-50-cpp-project-ideas-for-beginners-advanced/#scissor
+Project #2 from GeeksforGeeks https://www.geeksforgeeks.org/top-50-cpp-project-ideas-for-beginners-advanced/#scissor
